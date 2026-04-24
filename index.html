@@ -1,0 +1,197 @@
+<html>
+        <head><title>Downloaded HTML</title></head>
+        <body>
+            <pre style="white-space: pre-wrap; word-wrap: break-word;"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nature Haiku Generator</title>
+<!-- Google Fonts for a sleek font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+<style>
+  body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffe7;
+    text-align: center;
+    /* Nature background image */
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .container {
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00ffe7;
+    text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+  }
+  /* Your generator styles */
+  #topic {
+    font-size: 1.8em;
+    margin: 30px 0;
+    padding: 20px;
+    border: 2px solid #00ffe7;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 20px #00ffe7 inset;
+    transition: all 0.3s ease;
+  }
+  button {
+    background-color: #222;
+    border: 2px solid #00ffe7;
+    border-radius: 8px;
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 1.2em;
+    color: #00ffe7;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  button:hover {
+    background-color: #00ffe7;
+    color: #000;
+    box-shadow: 0 0 15px #00ffe7;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Nature Haiku Generator</h1>
+  <button id="generateBtn">Generate Topic</button>
+  <div id="topic">Click "Generate Topic" to start</div>
+  <button id="goodBtn" style="display:none;">Good</button>
+  <button id="tryAgainBtn" style="display:none;">Try Again</button>
+</div>
+
+<script>
+  const topics = [
+    "Autumn leaves falling",
+    "Morning dew on grass",
+    "Silent mountain peak",
+    "Cherry blossoms bloom",
+    "Gentle ocean waves",
+    "Winter frost on windows",
+    "Sunset over fields",
+    "Rain on the rooftop",
+    "Birds in the early dawn",
+    "Blooming spring garden",
+    "Whispering pine trees",
+    "Flowing mountain stream",
+    "Soft morning fog",
+    "Crimson sunset sky",
+    "Blossoms in the breeze",
+    "Calm lake reflections",
+    "Rustling autumn wind",
+    "Snowflakes drifting down",
+    "Dewdrops on petals",
+    "Spring rain whispers",
+    "Golden fields sway",
+    "Night sky with stars",
+    "Morning silence",
+    "Fresh green leaves",
+    "Evening cicadas",
+    "Misty forest path",
+    "Quiet desert sunset",
+    "Birdsong at dawn",
+    "Blooming cherry orchard",
+    "Crisp autumn air",
+    "Ripe fruit on the tree",
+    "Morning sunrise glow",
+    "Waves crash on rocks",
+    "Spring blossoms dance",
+    "Frost on the meadow",
+    "Cool mountain breeze",
+    "Autumn harvest moon",
+    "Gentle rain falls",
+    "Leaves in the wind",
+    "Quiet mountain lake",
+    "Wildflowers bloom",
+    "Sunlight through trees",
+    "Snow-capped peaks",
+    "Evening fireflies",
+    "First snow of winter",
+    "Breeze in the grass",
+    "Twilight shadows",
+    "Fresh mountain air",
+    "Birds singing sweetly",
+    "Calm river flowing",
+    "Golden sunrise",
+    "Silent snowfall",
+    "Nighttime forest",
+    "Spring river rush",
+    "Autumn mist",
+    "Morning fog over hills",
+    "Rushing mountain stream",
+    "Dew on spider webs",
+    "Clouds drifting away",
+    "Crisp wind in pines",
+    "Blooming daffodils",
+    "Evening glow on leaves",
+    "Frosty morning light",
+    "River mirror surface",
+    "Petals in the rain",
+    "Breezy hilltop",
+    "Misty morning valley",
+    "Sparrows chirping",
+    "Sunshine on moss",
+    "Frozen pond reflection",
+    "Night sky with moon",
+    "Spring breeze whispers",
+    "Leaves falling softly",
+    "Caterpillars in silk",
+    "Deer in the woods",
+    "Cloud shadows move",
+    "Winter's silent hush",
+    "Morning bird chorus",
+    "Sunlit meadow"
+  ];
+
+  const generateBtn = document.getElementById('generateBtn');
+  const topicDiv = document.getElementById('topic');
+  const goodBtn = document.getElementById('goodBtn');
+  const tryAgainBtn = document.getElementById('tryAgainBtn');
+
+  let currentTopic = '';
+
+  function generateTopic() {
+    const randomIndex = Math.floor(Math.random() * topics.length);
+    currentTopic = topics[randomIndex];
+    topicDiv.textContent = currentTopic;
+    goodBtn.style.display = 'inline-block';
+    tryAgainBtn.style.display = 'inline-block';
+  }
+
+  generateBtn.addEventListener('click', () => {
+    generateTopic();
+  });
+
+  goodBtn.addEventListener('click', () => {
+    alert('Great! Keep it up.');
+    goodBtn.style.display = 'none';
+    tryAgainBtn.style.display = 'none';
+  });
+
+  tryAgainBtn.addEventListener('click', () => {
+    generateTopic();
+  });
+</script>
+
+</body>
+</html></pre>
+        </body>
+    </html>
